@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ServletDemoOn</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+ 
+   <!-- Servlet Mapping for JspConfig Start -->
+  <servlet>
+    <servlet-name>JspConfig</servlet-name>
+    <jsp-file>/configImpliObj.jsp</jsp-file>
+    <init-param>
+      <param-name>company</param-name>
+      <param-value>wise</param-value>
+    </init-param>
+    <init-param>
+      <param-name>location</param-name>
+      <param-value>UK</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JspConfig</servlet-name>
+    <url-pattern>/configImpliObj</url-pattern>
+  </servlet-mapping>
+   <!-- Servlet Mapping for JspConfig End -->
+   
+   <!-- Servlet Mapping for JspContext Start -->
+  <servlet>
+    <servlet-name>JspContext</servlet-name>
+    <jsp-file>/contextImpliObj.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JspContext</servlet-name>
+    <url-pattern>/contextImpliObj</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>company</param-name>
+    <param-value>curve</param-value>
+  </context-param>
+  <context-param>
+    <param-name>location</param-name>
+    <param-value>UK</param-value>
+  </context-param>
+   <!-- Servlet Mapping for JspContext End -->
+
+</web-app>
